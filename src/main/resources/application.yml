@@ -13,4 +13,7 @@ spring:
 mybatis-plus:
   config-location: classpath:config/mybatis-config.xml
 
-
+springfox:
+  documentation:
+    swagger-ui:
+      enabled: true
