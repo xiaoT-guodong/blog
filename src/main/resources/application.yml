@@ -1,0 +1,16 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: blog
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/team_blog?serverTimezone=GMT%2B8
+    username: root
+    password: root
+
+mybatis-plus:
+  config-location: classpath:config/mybatis-config.xml
+
+
