@@ -29,6 +29,7 @@ public class ArticleServiceImpl implements ArticleService {
         articlePo.setIsDelete(Dictionary.UN_DELETE);
         QueryWrapper<ArticlePo> query = Wrappers.query(articlePo);
         Page<ArticlePo> page = articleDao.selectPage(new Page<>(pageParam.getPageNo(), pageParam.getPageSize()), query);
+        // 转换成vo
         Page<ArticleVo> voPage = new Page<>();
         voPage.setTotal(page.getTotal());
         voPage.setRecords(page.getRecords().stream().map(ArticleVo::from).collect(Collectors.toList()));
